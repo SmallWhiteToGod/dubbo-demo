@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+							http://www.springframework.org/schema/beans/spring-beans.xsd
+							http://code.alibabatech.com/schema/dubbo
+							http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--指定应用名-->
+    <dubbo:application name="order-service" />
+
+    <!--统一配置是否开启启动检查  重试次数 超时时间 reference中指定时会覆盖统一配置-->
+    <dubbo:consumer check="false" retries="0" timeout="1000"/>
+
+    <!-- 使用multicast广播注册中心暴露服务地址 -->
+    <dubbo:registry address="${zookeeper_address}" group="${zk_group}" protocol="zookeeper"/>
+
+    <!-- 声明需要调用的远程接口 生成服务代理 -->
+    <dubbo:reference id="userAddressService" version="1.0.0" timeout="2000" retries="3"
+                     interface="com.example.api.service.UserAddressService" />
+
+
+</beans>
