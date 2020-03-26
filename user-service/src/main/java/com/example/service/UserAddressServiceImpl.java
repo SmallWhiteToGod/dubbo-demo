@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.Arrays;
 import java.util.List;
 
-@Service("userAddressServiceImpl")
+@Service("userAddressService")
 public class UserAddressServiceImpl implements UserAddressService {
 
     public List<UserAddress> getAddressByUserId(String userId) {

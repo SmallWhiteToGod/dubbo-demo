@@ -10,7 +10,7 @@
     <dubbo:application name="order-service" />
 
     <!--统一配置是否开启启动检查  重试次数 超时时间 reference中指定时会覆盖统一配置-->
-    <dubbo:consumer check="false" retries="0" timeout="1000"/>
+    <dubbo:consumer check="false" retries="0" filter="initSid" timeout="1000"/>
 
     <!-- 使用multicast广播注册中心暴露服务地址 -->
     <dubbo:registry address="${zookeeper_address}" group="${zk_group}" protocol="zookeeper"/>
@@ -19,5 +19,7 @@
     <dubbo:reference id="userAddressService" version="1.0.0" timeout="2000" retries="3"
                      interface="com.example.api.service.UserAddressService" />
 
+    <dubbo:reference id="routerBySidService" version="1.0.0" timeout="2000" retries="3"
+                     interface="com.example.api.service.RouterBySidService" />
 
 </beans>

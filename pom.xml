@@ -14,6 +14,7 @@
         <module>user-service</module>
         <module>order-service</module>
         <module>user-service-api</module>
+        <module>filter-router</module>
     </modules>
 
     <properties>
@@ -24,9 +25,11 @@
         <commons-lang.version>2.6</commons-lang.version>
         <slf4j.version>1.7.7</slf4j.version>
         <dubbo.version>2.8.4</dubbo.version><!--阿里云仓库没有,需要手动上传-->
+        <fastjson.version>1.2.29</fastjson.version>
     </properties>
 
     <dependencies>
+        <!--spring-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
@@ -122,6 +125,12 @@
                     <artifactId>log4j</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <!--fastJson-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
         </dependency>
     </dependencies>
 </project>
