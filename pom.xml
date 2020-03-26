@@ -19,7 +19,7 @@
 
     <properties>
         <spring.version>5.2.3.RELEASE</spring.version>
-        <zookeeper.version>3.4.6</zookeeper.version>
+        <zookeeper.version>3.4.14</zookeeper.version>
         <zkclient.version>0.7</zkclient.version>
         <commons-pool.version>1.6</commons-pool.version>
         <commons-lang.version>2.6</commons-lang.version>
