@@ -18,7 +18,7 @@
     </modules>
 
     <properties>
-        <spring.version>5.2.3.RELEASE</spring.version>
+        <spring.version>5.3.18</spring.version>
         <zookeeper.version>3.4.6</zookeeper.version>
         <zkclient.version>0.7</zkclient.version>
         <commons-pool.version>1.6</commons-pool.version>
