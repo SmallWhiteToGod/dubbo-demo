@@ -25,7 +25,7 @@
         <commons-lang.version>2.6</commons-lang.version>
         <slf4j.version>1.7.7</slf4j.version>
         <dubbo.version>2.8.4</dubbo.version><!--阿里云仓库没有,需要手动上传-->
-        <fastjson.version>1.2.29</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
     </properties>
 
     <dependencies>
